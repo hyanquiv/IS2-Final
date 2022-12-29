@@ -7,10 +7,12 @@ pipeline{
             steps{
                 nodejs(nodeJSInstallationName: 'node'){
                     bat "npm i && npm ci"
+                    def scannerHome = tool 'sonarqube';
+
                     withSonarQubeEnv('sonarqube')
                     {
                         bat "npm install sonar-scanner"
-                        bat "/node_modules/sonar-scanner/bin/sonar-scanner"
+                        bat "${scannerHome}/bin/sonar-scanner"
                     }
                 }
             }
