@@ -16,7 +16,7 @@ const isLocalhost = Boolean(
     window.location.hostname === '[::1]' ||
     // 127.0.0.1/8 is considered localhost for IPv4.
     window.location.hostname.match(
-      /^127(?:\.(?:25[0-5]|2[0-4]\d|[01]?\d\d?)){3}$/
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
 
@@ -54,20 +54,6 @@ export function register(config) {
   }
 }
 
-function regValU(config)
-{
-  if (config && config.onUpdate) {
-    config.onUpdate(registration);
-  }
-}
-
-function regValS(config)
-{
-  if (config && config.onSuccess) {
-    config.onSuccess(registration);
-  }
-}
-
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -89,7 +75,9 @@ function registerValidSW(swUrl, config) {
               );
 
               // Execute callback
-              regValU(config);
+              if (config && config.onUpdate) {
+                config.onUpdate(registration);
+              }
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
@@ -97,7 +85,9 @@ function registerValidSW(swUrl, config) {
               console.log('Content is cached for offline use.');
 
               // Execute callback
-              regValS(config);
+              if (config && config.onSuccess) {
+                config.onSuccess(registration);
+              }
             }
           }
         };
@@ -143,3 +133,4 @@ export function unregister() {
     });
   }
 }
+
