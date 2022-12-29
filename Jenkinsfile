@@ -7,10 +7,13 @@ pipeline{
             steps{
                 nodejs(nodeJSInstallationName: 'node'){
                     bat "npm i && npm ci"
-                    withSonarQubeEnv('sonarqube')
-                    {
+                }
+            }
+
+            steps{
+                withSonarQubeEnv('sonarqube')
+                {
                         bat "sonar-scanner"
-                    }
                 }
             }
         }
