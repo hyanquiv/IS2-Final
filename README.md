@@ -57,3 +57,14 @@ El manual se encuentra en el siguiente archivo [Manual](https://drive.google.com
 
 ## Crear branchs: master, desarrollo y para cada integrante del equipo
 ![Image](https://github.com/hyanquiv/IS2-Final/blob/main/img/branches.jpeg)
+
+## Integrar los cambios (merge)
+- Facilmente Hacemos merge usando github desktop
+
+![Image](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/merge.png)
+<br/>
+
+- Visualizamos el historial del repositorio a traves de github desktop
+
+![Image](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/history.png)
+<br/>
