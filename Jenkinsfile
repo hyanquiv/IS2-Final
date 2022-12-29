@@ -7,7 +7,7 @@ pipeline{
             steps{
                 nodejs(nodeJSInstallationName: 'node'){
                     bat "npm i && npm ci"
-                    def scannerHome = tool 'sonarqube';
+                    def scannerHome = tool 'sonarqube'
 
                     withSonarQubeEnv('sonarqube')
                     {
