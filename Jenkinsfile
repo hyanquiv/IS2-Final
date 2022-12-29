@@ -10,7 +10,7 @@ pipeline{
                     withSonarQubeEnv('sonarqube')
                     {
                         bat "npm install sonar-scanner"
-                        bat "sonar-scanner"
+                        bat "/node_modules/sonar-scanner/bin/sonar-scanner"
                     }
                 }
             }
