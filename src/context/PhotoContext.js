@@ -22,9 +22,8 @@ const PhotoContextProvider = props => {
         );
       });
   };
-  const foo = useMemo(() => ({ images, loading, runSearch }), []);
   return (
-    <PhotoContext.Provider value={ foo }>
+    <PhotoContext.Provider value={{ images, loading, runSearch }}>
       {props.children}
     </PhotoContext.Provider>
   );
