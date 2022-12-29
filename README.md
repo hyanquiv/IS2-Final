@@ -171,7 +171,7 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
 Ejecutamos sonarqube desde el pipeline de Jenkins.
 - Ejecutar SonarQube localmente
 
-![Imagen](https://github.com/hyanquiv/IS2-Final/blob/main/img/startsonar.jpg)
+![Imagen](https://github.com/hyanquiv/IS2-Final/blob/main/img/sonar.png)
 
 - Creamos un archivo de configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/hyanquiv/IS2-Final/blob/main/sonar-project.properties)
 ```
