@@ -61,10 +61,10 @@ El manual se encuentra en el siguiente archivo [Manual](https://drive.google.com
 ## Integrar los cambios (merge)
 - Facilmente Hacemos merge usando github desktop
 
-![Merge](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/merge.png)
+![Merge](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/merge.jpg)
 <br/>
 
 - Visualizamos el historial del repositorio a traves de github desktop
 
-![Merge](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/history.png)
+![Merge](htttps://github.com/hyanquiv/IS2-Final/blob/main/img/history.jpg)
 <br/>
