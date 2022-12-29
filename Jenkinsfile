@@ -12,7 +12,7 @@ pipeline{
         //}
 
         stage("Sonar-Scanner"){
-            steps{
+            
                 def scannerHome = tool 'sonarqube';
                 withSonarQubeEnv('sonarqube')
                     {
@@ -22,7 +22,7 @@ pipeline{
                         sh "${scannerHome}/bin/sonar-scanner"
                         bat "sonar-scanner"
                     }
-            }
+            
             
         }
     }
