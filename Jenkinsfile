@@ -5,9 +5,9 @@ pipeline{
         stage(" Dependencias y Sonar-Scanner")
         {
             steps{
-                nodejs(nodeJSInstallationName: 'nodejs'){
+                nodejs(nodeJSInstallationName: 'node'){
                     bat "npm i && npm ci"
-                    withSonarQubeEnv('sonar')
+                    withSonarQubeEnv('sonarqube')
                     {
                         bat "npm install sonar-scanner"
                         bat "sonar-scanner"
