@@ -2,23 +2,25 @@ pipeline{
     agent any
     stages{
 
-        stage(" Dependencias")
-        {
-            steps{
-                nodejs(nodeJSInstallationName: 'node'){
-                    bat "npm i && npm ci"
-                }
-            }
-        }
+        //stage(" Dependencias")
+        // {
+        //    steps{
+         //       nodejs(nodeJSInstallationName: 'node'){
+        //            bat "npm i && npm ci"
+        //        }
+        //    }
+        //}
 
         stage("Sonar-Scanner"){
             steps{
-                
+                def scannerHome = tool 'sonarqube';
                 withSonarQubeEnv('sonarqube')
                     {
+
                         //bat "npm install sonar-scanner"
                         //mvn sonar:sonar
-                        bat "/node_modules/sonar-scanner/bin"
+                        sh "${scannerHome}/bin/sonar-scanner"
+                        bat "sonar-scanner"
                     }
             }
             
