@@ -75,7 +75,7 @@ Para el Proyecto, implementar um pipeline de CI/CD en Jenkins:
 <br/>
 El codigo se puede ver en el archivo [Jenkins](https://github.com/hyanquiv/IS2-Final/blob/main/Jenkinsfile)
 
-![Image](https://github.com/hyanquiv/IS2-Final/blob/main/img/pipelinetest.jpeg)
+![Image](https://github.com/hyanquiv/IS2-Final/blob/main/img/pipeline.png)
 
 ```
 pipeline
