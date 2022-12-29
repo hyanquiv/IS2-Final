@@ -54,6 +54,20 @@ export function register(config) {
   }
 }
 
+function regValU(config)
+{
+  if (config && config.onUpdate) {
+    config.onUpdate(registration);
+  }
+}
+
+function regValS(config)
+{
+  if (config && config.onSuccess) {
+    config.onSuccess(registration);
+  }
+}
+
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -75,9 +89,7 @@ function registerValidSW(swUrl, config) {
               );
 
               // Execute callback
-              if (config && config.onUpdate) {
-                config.onUpdate(registration);
-              }
+              regValU(config);
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
@@ -85,9 +97,7 @@ function registerValidSW(swUrl, config) {
               console.log('Content is cached for offline use.');
 
               // Execute callback
-              if (config && config.onSuccess) {
-                config.onSuccess(registration);
-              }
+              regValS(config);
             }
           }
         };
