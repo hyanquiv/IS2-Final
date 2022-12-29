@@ -6,6 +6,25 @@ import Item from "./components/Item";
 import Search from "./components/Search";
 import NotFound from "./components/NotFound";
 
+function handsub (handleSubmit)
+{
+  return <Header
+  handleSubmit={this.handleSubmit}
+  history={props.history}/>
+}
+
+function handred(){
+  return <Redirect to="/mountain" />
+}
+
+function handserc(item){
+ return <Item searchTerm={item}/> 
+}
+
+function handsercT(){
+  return <Search searchTerm={props.match.params.searchInput} />
+}
+
 class App extends Component {
   // Prevent page reload, clear input, set URL and push history on submit
   handleSubmit = (e, history, searchInput) => {
@@ -21,32 +40,22 @@ class App extends Component {
         <HashRouter basename="/SnapScout">
           <div className="container">
             <Route
-              render={props => (
-                <Header
-                  handleSubmit={this.handleSubmit}
-                  history={props.history}
-                />
-              )}
+              render={handsub(this.handleSubmit)}
             />
             <Switch>
               <Route
                 exact
                 path="/"
-                render={() => <Redirect to="/mountain" />}
+                render={handred}
               />
 
-              <Route
-                path="/mountain"
-                render={() => <Item searchTerm="mountain" />}
-              />
-              <Route path="/beach" render={() => <Item searchTerm="beach" />} />
-              <Route path="/bird" render={() => <Item searchTerm="bird" />} />
-              <Route path="/food" render={() => <Item searchTerm="food" />} />
+              <Route path="/mountain" render={handserc("mountain") }/>
+              <Route path="/beach" render={handserc("beach") } />
+              <Route path="/bird" render={handserc("bird") } />
+              <Route path="/food" render={handserc("food") } />
               <Route
                 path="/search/:searchInput"
-                render={props => (
-                  <Search searchTerm={props.match.params.searchInput} />
-                )}
+                render={handsercT}
               />
               <Route component={NotFound} />
             </Switch>
@@ -57,4 +66,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;
