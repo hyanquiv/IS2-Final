@@ -44,9 +44,6 @@ Create a config.js file in api folder inside src folders. In config.js file writ
 
 **2. Search functionality added to search photos from API.**
 
-### Coming Soon
-
-- [ ] Cypress E2E Tests
 
 ### Contributing
 
@@ -55,3 +52,8 @@ Everyone is welcomed to contribute to this project. You can contribute either by
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Manual de instalacion y configuracion del pipeline de CI/CD de Jenkins
+El manual se encuentra en el siguiente archivo [Manual](https://drive.google.com/file/d/1XIE2AHj_YlGAvxzcS7R8MqA-lrVRtF_z/view?usp=share_link)
+<br/>
+
+## Crear branchs: master, desarrollo y para cada integrante del equipo
+![Image]()
