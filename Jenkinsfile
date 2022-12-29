@@ -9,7 +9,6 @@ pipeline{
                     bat "npm i && npm ci"
                     withSonarQubeEnv('sonarqube')
                     {
-                        bat "npm install sonar-scanner"
                         bat "sonar-scanner"
                     }
                 }
