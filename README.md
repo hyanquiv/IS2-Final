@@ -87,22 +87,34 @@ pipeline
         {
             steps
             {
-                nodejs(nodeJSInstallationName: 'node')
+                nodejs(nodeJSInstallationName: 'nodejs')
                 {
-                    sh "npm i && npm ci"
+                    bat "npm i && npm ci"
                 }
             }
         }
 
         stage("Sonar-Scanner")
         {
-            withSonarQubeEnv('sonarqube')
-            {
-                //bat "npm install sonar-scanner"
-                //mvn sonar:sonar
-                sh "npm install sonar-scanner"
-                sh "npm run sonar"
-            }    
+            steps{
+                withSonarQubeEnv('sonar')
+                {
+                    bat "npm install sonar-scanner"
+                    echo "Sonar Scanner"
+                    bat "sonar-scanner"
+                }    
+            }
+        }
+        
+        stage("Unit Test")
+        {
+            steps{
+                withSonarQubeEnv('sonar')
+                {
+                    echo "Unit Test"
+                    bat "npm run test -a"
+                }    
+            }
         }
     }
 }
