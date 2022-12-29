@@ -56,4 +56,4 @@ El manual se encuentra en el siguiente archivo [Manual](https://drive.google.com
 <br/>
 
 ## Crear branchs: master, desarrollo y para cada integrante del equipo
-![Image]()
+![Image](https://github.com/hyanquiv/IS2-Final/blob/main/img/branches.jpeg)
