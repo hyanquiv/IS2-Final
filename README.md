@@ -258,9 +258,6 @@ test('click the button search calls evente handler once', () => {
 ```
 
 
-![](https://github.com/hyanquiv/IS2-Final/blob/main/img/unittest.jfif)
-
-
 
 ## Pruebas de Seguridad:
 
