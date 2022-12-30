@@ -272,7 +272,7 @@ test('click the button search calls evente handler once', () => {
 
 ## Pruebas de Performance:
 
-- La prueba de performance fue realizada en JMETER la cual se puede ver: en este [PDF]()
+- La prueba de performance fue realizada en JMETER la cual se puede ver: en este [PDF](https://drive.google.com/file/d/1gHz1hwC8kCdvmjlqyPgMrTWAJjCtAPXw/view?usp=share_link)
 
 ## Tablero de Trello:
 
