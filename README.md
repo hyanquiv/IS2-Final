@@ -197,7 +197,7 @@ npm install sonar-scanner
 sonar-scanner
 ```
 
-![Sonar](https://github.com/hyanquiv/IS2-Final/blob/main/img/dependysonar.jpg)
+![Sonar](https://github.com/hyanquiv/IS2-Final/blob/main/img/dependysonar.jpeg)
 <br/>
 
 - Visualizamos la consola de Jenkins al ejecutar sonar-scanner.
