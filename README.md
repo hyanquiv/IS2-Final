@@ -169,7 +169,6 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
 
 ## Análisis Estático:
 Ejecutamos sonarqube desde el pipeline de Jenkins.
-- Ejecutar SonarQube localmente
 
 ![Imagen](https://github.com/hyanquiv/IS2-Final/blob/main/img/sonar.png)
 
