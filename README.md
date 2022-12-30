@@ -170,8 +170,6 @@ Este proyecto ya contaba con una contruccion automatica en [JSON](https://github
 ## Análisis Estático:
 Ejecutamos sonarqube desde el pipeline de Jenkins.
 
-![Imagen](https://github.com/hyanquiv/IS2-Final/blob/main/img/sonar.png)
-
 - Creamos un archivo de configuracion en el directorio del proyecto: [sonar-project.properties](https://github.com/hyanquiv/IS2-Final/blob/main/sonar-project.properties)
 ```
 sonar.projectKey=IS-Final
